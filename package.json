@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-babel-webpack",
+  "version": "0.0.1",
+  "description": "NodeJS boilerplate with babel and webpack",
+  "scripts": {
+    "clean": "rm -rf build",
+    "build": "webpack --config webpack.config.babel.js",
+    "start": "node build/app.js",
+    "demon": "nodemon build/app.js",
+    "watch": "webpack --watch",
+    "dev": "npm-run-all build --parallel watch demon"
+  },
+  "author": "mojomoth",
+  "license": "ISC",
+  "dependencies": {
+    "jsdom": "^11.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "node-pre-gyp": "^0.6.39",
+    "nodemon": "^1.14.11",
+    "npm-run-all": "^4.1.2",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
